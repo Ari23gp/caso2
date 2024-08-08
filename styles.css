@@ -46,6 +46,7 @@ h1 {
     width: 300px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    color: #4e342e; /* Color de texto visible */
 }
 
 #cart-items h2 {
@@ -60,8 +61,8 @@ h1 {
 
 #cart-list li {
     margin-bottom: 10px;
+    color: #4e342e; /* Color de texto visible */
 }
-
 #checkout {
     background-color: #4e342e;
     color: white;
