@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería Elegante</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Elegante</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Cafetería Elegante</h1>
-        <div id="cart-container">
-            <img src="carrito.png" alt="Carrito" id="cart-icon">
-            <div id="cart-items">
-                <h2>Tu Carrito</h2>
-                <ul id="cart-list"></ul>
-                <p>Total: $<span id="cart-total">0.00</span></p>
-                <button id="checkout">Pagar</button>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="product">
-            <img src="producto1.jpg" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>$2.75</p>
-            <button class="add-to-cart" data-name="Producto 1" data-price="2.75">Agregar al carrito</button>
-        </section>
-        <section class="product">
-            <img src="producto2.jpg" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <p>$3.50</p>
-            <button class="add-to-cart" data-name="Producto 2" data-price="3.50">Agregar al carrito</button>
-        </section>
-        <!-- Agrega más productos según lo necesites -->
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <h1>Cafetería Elegante</h1>
+    <div class="cart-icon" onclick="toggleCart()">
+      <img src="cart-icon.png" alt="Carrito de Compras">
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product">
+        <img src="product1.jpg" alt="Producto 1">
+        <h2>Producto 1</h2>
+        <p>$2.75</p>
+        <button onclick="addToCart('Producto 1', 2.75)">Agregar al carrito</button>
+      </div>
+      <!-- Agrega más productos aquí -->
+    </section>
+  </main>
+
+  <div id="cart" class="cart">
+    <h2>Tu Carrito</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Pagar</button>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
