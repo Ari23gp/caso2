@@ -34,7 +34,7 @@ h1 {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: white;
+    background-color: black;
     border: 1px solid #ddd;
     padding: 20px;
     width: 250px;
@@ -42,7 +42,7 @@ h1 {
 }
 
 .product {
-    background-color: white;
+    background-color: black;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
