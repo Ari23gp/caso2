@@ -21,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const name = button.getAttribute('data-name');
             const price = parseFloat(button.getAttribute('data-price'));
 
+            // Validar que los datos sean correctos
+            if (!name || isNaN(price)) {
+                console.error('Error: Datos del producto inválidos.');
+                return;
+            }
+
             const item = cart.find(product => product.name === name);
             if (item) {
                 item.quantity += 1;
